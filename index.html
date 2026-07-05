@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sameeha.S — SPL Candidate | SRC Memorial School</title>
+<meta name="description" content="Vote Sameeha.S for School Pupil Leader. Together, Let's Write A Better Chapter. SRC Memorial Matric Higher Secondary School."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --maroon: #7B1C1C;
+  --maroon-light: #9B2D2D;
+  --maroon-dark: #5A1212;
+  --gold: #C9962A;
+  --gold-light: #E8B84B;
+  --gold-pale: #F5E4B0;
+  --cream: #FDF8F0;
+  --white: #FFFFFF;
+  --glass: rgba(123,28,28,0.08);
+  --glass-gold: rgba(201,150,42,0.12);
+  --shadow: 0 8px 40px rgba(123,28,28,0.18);
+  --shadow-gold: 0 4px 24px rgba(201,150,42,0.22);
+  --transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+[data-theme="dark"] {
+  --bg: #0D0608;
+  --bg2: #130A0A;
+  --bg3: #1A0F0F;
+  --surface: rgba(255,255,255,0.03);
+  --surface2: rgba(255,255,255,0.06);
+  --border: rgba(201,150,42,0.18);
+  --text: #F5F0E8;
+  --text2: #C4B8A8;
+  --text3: #8A7A6A;
+}
+[data-theme="light"] {
+  --bg: #FAF6EF;
+  --bg2: #FDF8F2;
+  --bg3: #FFFFFF;
+  --surface: rgba(123,28,28,0.04);
+  --surface2: rgba(123,28,28,0.08);
+  --border: rgba(123,28,28,0.15);
+  --text: #1A0808;
+  --text2: #4A2020;
+  --text3: #8A6060;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  cursor:none;
+}
+/* Custom cursor */
+#cursor{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s ease,width 0.3s,height 0.3s,opacity 0.3s;mix-blend-mode:difference;}
+#cursor-ring{position:fixed;width:40px;height:40px;border:1.5px solid var(--gold);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.15s ease,width 0.3s,height 0.3s,opacity 0.3s;opacity:0.6;}
+body:hover #cursor{opacity:1;}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px;}
+
+/* ===== NAV ===== */
+#navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  height:70px;
+  background:rgba(13,6,8,0.6);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:var(--transition);
+}
+[data-theme="light"] #navbar{background:rgba(250,246,239,0.75);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo-icon{font-size:1.6rem;}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);font-weight:700;letter-spacing:0.03em;}
+.nav-links{display:flex;align-items:center;gap:2rem;}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.04em;transition:color 0.3s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{background:linear-gradient(135deg,var(--maroon),var(--maroon-light));color:var(--gold-pale)!important;padding:8px 20px;border-radius:50px;font-weight:600!important;border:1px solid var(--gold);}
+.nav-cta::after{display:none!important;}
+.nav-actions{display:flex;align-items:center;gap:12px;}
+#theme-toggle{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:8px 12px;border-radius:50px;cursor:none;font-size:0.9rem;transition:var(--transition);}
+#theme-toggle:hover{background:var(--glass-gold);border-color:var(--gold);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:none;background:none;border:none;padding:4px;}
+.hamburger span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:var(--transition);}
+.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);padding:20px 5%;flex-direction:column;gap:16px;z-index:999;}
+.mobile-menu a{color:var(--text2);text-decoration:none;font-size:1rem;padding:8px 0;border-bottom:1px solid var(--border);}
+.mobile-menu.open{display:flex;}
+
+/* ===== HERO ===== */
+#hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  padding:100px 5% 60px;
+}
+#hero-canvas{position:absolute;inset:0;z-index:0;}
+.hero-content{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:center;width:100%;max-width:1400px;margin:0 auto;
+}
+.hero-left{}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--glass-gold);border:1px solid rgba(201,150,42,0.3);
+  color:var(--gold-light);font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  padding:6px 16px;border-radius:50px;margin-bottom:24px;
+  animation:fadeUp 0.6s ease 0.2s both;
+}
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.8rem,5vw,4.8rem);
+  font-weight:900;line-height:1.05;
+  margin-bottom:8px;
+  animation:fadeUp 0.6s ease 0.3s both;
+}
+.hero-title .line1{color:var(--text);}
+.hero-title .line2{
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-tagline{
+  font-family:'Dancing Script',cursive;
+  font-size:clamp(1.4rem,2.5vw,2.2rem);
+  color:var(--gold-light);
+  margin-bottom:20px;
+  animation:fadeUp 0.6s ease 0.4s both;
+}
+.hero-desc{
+  color:var(--text2);font-size:1rem;line-height:1.7;
+  max-width:480px;margin-bottom:36px;
+  animation:fadeUp 0.6s ease 0.5s both;
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp 0.6s ease 0.6s both;}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--maroon) 0%,var(--maroon-light) 100%);
+  color:var(--gold-pale);font-weight:600;font-size:0.9rem;
+  padding:14px 28px;border-radius:50px;text-decoration:none;
+  border:1px solid rgba(201,150,42,0.4);
+  box-shadow:0 4px 20px rgba(123,28,28,0.4);
+  transition:var(--transition);cursor:none;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(123,28,28,0.6);background:linear-gradient(135deg,var(--maroon-light),var(--maroon));}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--surface2);border:1px solid var(--border);
+  color:var(--text);font-weight:500;font-size:0.9rem;
+  padding:14px 28px;border-radius:50px;text-decoration:none;
+  transition:var(--transition);cursor:none;
+}
+.btn-secondary:hover{background:var(--glass-gold);border-color:var(--gold);color:var(--gold);}
+.hero-stats{
+  display:flex;gap:32px;margin-top:40px;
+  animation:fadeUp 0.6s ease 0.7s both;
+}
+.stat-item{text-align:left;}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--gold);}
+.stat-label{font-size:0.75rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px;}
+.hero-right{
+  position:relative;display:flex;justify-content:center;
+  animation:fadeUp 0.8s ease 0.4s both;
+}
+.hero-image-wrap{
+  position:relative;width:380px;height:480px;
+}
+.hero-image-bg{
+  position:absolute;inset:-20px;
+  background:radial-gradient(ellipse at center,rgba(201,150,42,0.15) 0%,transparent 70%);
+  animation:pulse 4s ease-in-out infinite;
+}
+.hero-image-ring{
+  position:absolute;inset:-8px;
+  border-radius:200px 200px 200px 200px / 240px 240px 160px 160px;
+  border:2px solid rgba(201,150,42,0.3);
+  animation:spin 20s linear infinite;
+}
+.hero-image-ring2{
+  position:absolute;inset:-20px;
+  border-radius:50%;
+  border:1px solid rgba(201,150,42,0.15);
+  animation:spin 30s linear infinite reverse;
+}
+.hero-image{
+  width:100%;height:100%;
+  border-radius:160px 160px 120px 120px;
+  object-fit:cover;
+  border:3px solid rgba(201,150,42,0.4);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 0 1px rgba(201,150,42,0.2);
+}
+.hero-badge-float{
+  position:absolute;bottom:-20px;right:-20px;
+  background:linear-gradient(135deg,var(--maroon),var(--maroon-dark));
+  border:2px solid var(--gold);
+  border-radius:50%;width:110px;height:110px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-gold);
+  animation:floatY 3s ease-in-out infinite;
+}
+.hero-badge-float .symbol{font-size:2rem;}
+.hero-badge-float .label{font-size:0.6rem;color:var(--gold-light);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-top:2px;}
+.hero-school-badge{
+  position:absolute;top:-20px;left:-20px;
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:16px;padding:12px 16px;
+  display:flex;align-items:center;gap:10px;
+  box-shadow:var(--shadow);
+  animation:floatY 4s ease-in-out 1s infinite;
+}
+.school-badge-icon{font-size:1.8rem;}
+.school-badge-text{font-size:0.72rem;color:var(--text2);line-height:1.4;}
+.school-badge-text strong{color:var(--gold);display:block;font-size:0.8rem;}
+
+/* ===== SECTIONS COMMON ===== */
+section{padding:100px 5%;position:relative;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-label{
+  display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:12px;
+}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,3rem);font-weight:700;
+  line-height:1.1;margin-bottom:16px;color:var(--text);
+}
+.section-sub{color:var(--text2);font-size:1rem;line-height:1.7;max-width:560px;}
+.section-header{margin-bottom:60px;}
+.section-divider{width:60px;height:3px;background:linear-gradient(90deg,var(--gold),transparent);margin:16px 0;}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* ===== VALUES ===== */
+#values{background:var(--bg2);}
+.values-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:20px;
+}
+.value-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:20px;padding:28px 22px;
+  transition:var(--transition);cursor:none;
+  position:relative;overflow:hidden;
+}
+.value-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--glass-gold),transparent);
+  opacity:0;transition:opacity 0.4s;
+}
+.value-card:hover{transform:translateY(-6px);border-color:rgba(201,150,42,0.4);box-shadow:var(--shadow-gold);}
+.value-card:hover::before{opacity:1;}
+.value-icon{font-size:2.4rem;margin-bottom:14px;display:block;}
+.value-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:8px;}
+.value-desc{font-size:0.82rem;color:var(--text2);line-height:1.6;}
+
+/* ===== ABOUT ===== */
+.about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;}
+.about-img-wrap{position:relative;}
+.about-img{width:100%;border-radius:24px;object-fit:cover;border:2px solid rgba(201,150,42,0.25);box-shadow:var(--shadow);}
+.about-quote-card{
+  position:absolute;bottom:-24px;right:-24px;
+  background:linear-gradient(135deg,var(--maroon),var(--maroon-dark));
+  border:1px solid rgba(201,150,42,0.4);
+  border-radius:16px;padding:18px 22px;max-width:240px;
+  box-shadow:var(--shadow);
+}
+.about-quote-card .quote{font-family:'Dancing Script',cursive;font-size:1.1rem;color:var(--gold-light);line-height:1.4;}
+.about-quote-card .cite{font-size:0.72rem;color:var(--gold);margin-top:8px;letter-spacing:0.06em;}
+.about-text h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);margin-bottom:8px;margin-top:28px;}
+.about-text p{color:var(--text2);font-size:0.95rem;line-height:1.75;}
+.skills-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+.skill-tag{
+  background:var(--surface2);border:1px solid var(--border);
+  color:var(--text2);font-size:0.78rem;padding:5px 14px;border-radius:50px;
+  transition:var(--transition);
+}
+.skill-tag:hover{background:var(--glass-gold);border-color:var(--gold);color:var(--gold);}
+.about-timeline{margin-top:32px;}
+.timeline-item{
+  display:flex;gap:16px;padding-bottom:20px;
+  border-left:2px solid var(--border);margin-left:8px;padding-left:20px;
+  position:relative;
+}
+.timeline-item::before{
+  content:'';position:absolute;left:-6px;top:6px;
+  width:10px;height:10px;border-radius:50%;
+  background:var(--gold);box-shadow:0 0 10px var(--gold);
+}
+.timeline-year{font-size:0.75rem;color:var(--gold);font-weight:600;min-width:40px;}
+.timeline-content{font-size:0.88rem;color:var(--text2);}
+.timeline-content strong{color:var(--text);display:block;margin-bottom:2px;}
+
+/* ===== STUDENT HUB ===== */
+#hub{background:var(--bg2);}
+.hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.hub-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:20px;padding:24px;cursor:none;
+  transition:var(--transition);position:relative;overflow:hidden;
+}
+.hub-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--maroon),var(--gold));
+  transform:scaleX(0);transform-origin:left;transition:transform 0.4s;
+}
+.hub-card:hover{transform:translateY(-4px);border-color:var(--border);box-shadow:var(--shadow);}
+.hub-card:hover::after{transform:scaleX(1);}
+.hub-icon{font-size:2rem;margin-bottom:12px;}
+.hub-title{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--text);margin-bottom:8px;font-weight:600;}
+.hub-desc{font-size:0.82rem;color:var(--text2);line-height:1.6;}
+.hub-tag{
+  display:inline-block;margin-top:12px;font-size:0.7rem;font-weight:600;
+  letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);
+  background:var(--glass-gold);padding:3px 10px;border-radius:50px;
+}
+
+/* ===== VOICE ===== */
+.voice-wrap{
+  background:linear-gradient(135deg,var(--maroon-dark),var(--bg2));
+  border:1px solid var(--border);border-radius:28px;padding:50px;
+}
+.voice-textarea{
+  width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border);
+  border-radius:16px;padding:18px;color:var(--text);
+  font-family:'Inter',sans-serif;font-size:0.95rem;
+  resize:none;min-height:120px;margin:20px 0;
+  transition:border-color 0.3s;outline:none;
+}
+.voice-textarea:focus{border-color:var(--gold);}
+.voice-categories{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0;}
+.cat-btn{
+  background:var(--surface2);border:1px solid var(--border);
+  color:var(--text2);font-size:0.8rem;padding:6px 16px;
+  border-radius:50px;cursor:none;transition:var(--transition);
+}
+.cat-btn.active,.cat-btn:hover{background:var(--glass-gold);border-color:var(--gold);color:var(--gold);}
+.voice-suggestions{margin-top:40px;display:grid;gap:16px;}
+.suggestion-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:16px;padding:18px 22px;
+  display:flex;align-items:flex-start;gap:16px;
+}
+.suggestion-avatar{
+  width:36px;height:36px;border-radius:50%;
+  background:linear-gradient(135deg,var(--maroon),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.9rem;font-weight:600;color:white;flex-shrink:0;
+}
+.suggestion-body{}
+.suggestion-cat{font-size:0.7rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;}
+.suggestion-text{font-size:0.88rem;color:var(--text2);line-height:1.6;margin-top:4px;}
+.suggestion-time{font-size:0.72rem;color:var(--text3);margin-top:6px;}
+
+/* ===== APPRECIATION ===== */
+#appreciation{background:var(--bg2);}
+.appreciation-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
+.appreciation-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:20px;padding:24px;position:relative;overflow:hidden;
+  transition:var(--transition);
+}
+.appreciation-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.appreciation-card .heart{
+  position:absolute;top:20px;right:20px;font-size:1.5rem;
+  animation:heartbeat 2s ease-in-out infinite;
+}
+.appreciation-from{font-size:0.75rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
+.appreciation-msg{font-family:'Playfair Display',serif;font-size:1rem;color:var(--text);line-height:1.6;font-style:italic;}
+.appreciation-sig{font-size:0.8rem;color:var(--text3);margin-top:12px;}
+
+/* ===== EVENTS ===== */
+.events-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;}
+.event-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:20px;overflow:hidden;transition:var(--transition);
+}
+.event-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+.event-banner{
+  height:10px;
+  background:linear-gradient(90deg,var(--maroon),var(--gold));
+}
+.event-body{padding:24px;}
+.event-date{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:0.75rem;color:var(--gold);font-weight:600;
+  letter-spacing:0.06em;margin-bottom:12px;
+}
+.event-name{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--text);margin-bottom:8px;font-weight:600;}
+.event-desc{font-size:0.83rem;color:var(--text2);line-height:1.6;}
+.countdown{
+  display:flex;gap:12px;margin-top:16px;
+}
+.countdown-unit{text-align:center;background:var(--surface2);border-radius:10px;padding:10px 14px;min-width:52px;}
+.countdown-num{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);font-weight:700;line-height:1;}
+.countdown-label{font-size:0.6rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;}
+.event-register{
+  display:inline-flex;align-items:center;gap:6px;margin-top:16px;
+  background:linear-gradient(135deg,var(--maroon),var(--maroon-light));
+  color:var(--gold-pale);font-size:0.8rem;font-weight:600;
+  padding:8px 20px;border-radius:50px;text-decoration:none;
+  border:1px solid rgba(201,150,42,0.3);cursor:none;
+  transition:var(--transition);
+}
+.event-register:hover{transform:scale(1.03);box-shadow:var(--shadow-gold);}
+
+/* ===== ACHIEVEMENTS ===== */
+#achievements{background:var(--bg2);}
+.achievements-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+.achievement-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:20px;padding:24px;
+  display:flex;align-items:flex-start;gap:16px;
+  transition:var(--transition);
+}
+.achievement-card:hover{transform:translateY(-4px);border-color:rgba(201,150,42,0.3);box-shadow:var(--shadow-gold);}
+.achievement-medal{
+  font-size:2.2rem;
+  animation:floatY 3s ease-in-out infinite;
+}
+.achievement-title{font-family:'Playfair Display',serif;font-size:1rem;color:var(--text);margin-bottom:4px;font-weight:600;}
+.achievement-sub{font-size:0.82rem;color:var(--text2);}
+.achievement-year{font-size:0.72rem;color:var(--gold);margin-top:6px;font-weight:600;}
+
+/* ===== GALLERY ===== */
+.gallery-grid{
+  columns:4;column-gap:16px;
+}
+.gallery-item{
+  break-inside:avoid;margin-bottom:16px;border-radius:16px;overflow:hidden;
+  cursor:none;position:relative;
+}
+.gallery-item img{width:100%;display:block;transition:transform 0.4s;}
+.gallery-item:hover img{transform:scale(1.04);}
+.gallery-placeholder{
+  background:linear-gradient(135deg,var(--surface2),var(--surface));
+  border:1px solid var(--border);display:flex;align-items:center;justify-content:center;
+  font-size:2rem;color:var(--text3);
+}
+
+/* ===== CONTACT ===== */
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.contact-info{}
+.contact-info h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:8px;}
+.contact-info p{color:var(--text2);font-size:0.93rem;line-height:1.7;margin-bottom:24px;}
+.contact-detail{display:flex;align-items:center;gap:12px;margin-bottom:16px;color:var(--text2);font-size:0.9rem;}
+.contact-detail-icon{width:40px;height:40px;background:var(--surface2);border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.contact-form{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:36px;}
+.form-group{margin-bottom:20px;}
+.form-label{display:block;font-size:0.82rem;font-weight:600;color:var(--text);margin-bottom:8px;letter-spacing:0.04em;}
+.form-input,.form-textarea{
+  width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border);
+  border-radius:12px;padding:12px 16px;color:var(--text);
+  font-family:'Inter',sans-serif;font-size:0.93rem;
+  transition:border-color 0.3s;outline:none;
+}
+[data-theme="light"] .form-input,[data-theme="light"] .form-textarea{background:rgba(0,0,0,0.03);}
+.form-input:focus,.form-textarea:focus{border-color:var(--gold);}
+.form-textarea{resize:none;min-height:110px;}
+.form-submit{
+  width:100%;background:linear-gradient(135deg,var(--maroon),var(--maroon-light));
+  color:var(--gold-pale);font-weight:600;font-size:0.95rem;
+  padding:14px;border-radius:50px;border:1px solid rgba(201,150,42,0.4);
+  cursor:none;transition:var(--transition);
+}
+.form-submit:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+
+/* ===== VOTE BANNER ===== */
+#vote-banner{
+  background:linear-gradient(135deg,var(--maroon-dark) 0%,var(--maroon) 50%,var(--maroon-light) 100%);
+  text-align:center;padding:80px 5%;
+  position:relative;overflow:hidden;
+}
+#vote-banner::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,rgba(201,150,42,0.15) 0%,transparent 70%);
+}
+.vote-banner-content{position:relative;z-index:1;}
+.vote-symbol{font-size:4rem;margin-bottom:16px;animation:floatY 3s ease-in-out infinite;}
+.vote-banner-title{
+  font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);
+  color:var(--gold-pale);font-weight:900;margin-bottom:8px;
+}
+.vote-banner-sub{color:rgba(245,228,176,0.75);font-size:1rem;margin-bottom:32px;}
+.vote-date{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(201,150,42,0.2);border:1px solid rgba(201,150,42,0.4);
+  color:var(--gold-light);font-weight:600;padding:10px 28px;border-radius:50px;font-size:0.9rem;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--bg2);border-top:1px solid var(--border);
+  padding:60px 5% 30px;
+}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px;}
+.footer-brand{}
+.footer-brand .logo{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold);margin-bottom:12px;font-weight:700;}
+.footer-brand p{font-size:0.85rem;color:var(--text3);line-height:1.7;max-width:260px;}
+.footer-nav h4{font-size:0.82rem;font-weight:700;color:var(--text);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px;}
+.footer-nav a{display:block;color:var(--text3);font-size:0.85rem;text-decoration:none;margin-bottom:10px;transition:color 0.3s;}
+.footer-nav a:hover{color:var(--gold);}
+.footer-bottom{
+  border-top:1px solid var(--border);padding-top:24px;
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:0.8rem;color:var(--text3);
+}
+.footer-bottom span{color:var(--gold);}
+
+/* ===== FLOATING VOTE BTN ===== */
+#floating-vote{
+  position:fixed;bottom:28px;right:28px;z-index:900;
+  background:linear-gradient(135deg,var(--maroon),var(--maroon-light));
+  border:1px solid rgba(201,150,42,0.5);
+  color:var(--gold-pale);font-weight:700;font-size:0.82rem;
+  padding:12px 22px;border-radius:50px;
+  box-shadow:0 8px 30px rgba(123,28,28,0.5);
+  cursor:none;text-decoration:none;
+  display:flex;align-items:center;gap:8px;
+  transition:var(--transition);
+  animation:floatY 3s ease-in-out infinite;
+}
+#floating-vote:hover{transform:scale(1.05) translateY(-4px);}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.05);}}
+@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+@keyframes floatY{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+@keyframes heartbeat{0%,100%{transform:scale(1);}50%{transform:scale(1.2);}}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ===== SCROLL PROGRESS ===== */
+#scroll-progress{
+  position:fixed;top:70px;left:0;right:0;height:2px;z-index:999;
+  background:linear-gradient(90deg,var(--maroon),var(--gold));
+  transform-origin:left;transform:scaleX(0);transition:transform 0.05s;
+}
+
+/* ===== TICKER ===== */
+.ticker-wrap{
+  background:var(--maroon-dark);border-top:1px solid rgba(201,150,42,0.25);
+  border-bottom:1px solid rgba(201,150,42,0.25);
+  padding:10px 0;overflow:hidden;
+}
+.ticker{display:flex;width:max-content;animation:marquee 30s linear infinite;}
+.ticker-item{
+  white-space:nowrap;font-size:0.8rem;color:var(--gold-light);
+  padding:0 40px;display:flex;align-items:center;gap:10px;
+}
+.ticker-sep{color:var(--gold);font-size:1rem;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+  .hero-content{grid-template-columns:1fr;gap:40px;}
+  .hero-right{order:-1;}
+  .hero-image-wrap{width:300px;height:380px;}
+  .about-grid{grid-template-columns:1fr;}
+  .hub-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .contact-wrap{grid-template-columns:1fr;}
+  .gallery-grid{columns:3;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .hero-content{gap:30px;}
+  .hero-image-wrap{width:260px;height:330px;}
+  .hub-grid{grid-template-columns:1fr;}
+  .values-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-stats{gap:20px;}
+  .stat-num{font-size:1.5rem;}
+  .gallery-grid{columns:2;}
+  .footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;gap:10px;text-align:center;}
+  section{padding:70px 5%;}
+}
+@media(max-width:480px){
+  .gallery-grid{columns:1;}
+  .values-grid{grid-template-columns:1fr;}
+  .achievements-grid{grid-template-columns:1fr;}
+  .countdown{gap:8px;}
+}
+</style>
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-icon">📖</span>
+    <span class="nav-logo-text">Sameeha.S</span>
+  </a>
+  <div class="nav-links" id="nav-links">
+    <a href="#about">About</a>
+    <a href="#values">Values</a>
+    <a href="#hub">Student Hub</a>
+    <a href="#voice">Voice</a>
+    <a href="#events">Events</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+    <a href="#vote-banner" class="nav-cta">Vote 📖</a>
+  </div>
+  <div class="nav-actions">
+    <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#values" onclick="toggleMenu()">Values</a>
+  <a href="#hub" onclick="toggleMenu()">Student Hub</a>
+  <a href="#voice" onclick="toggleMenu()">Voice</a>
+  <a href="#events" onclick="toggleMenu()">Events</a>
+  <a href="#achievements" onclick="toggleMenu()">Achievements</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- Ticker -->
+<div class="ticker-wrap" style="margin-top:70px;">
+  <div class="ticker">
+    <span class="ticker-item"><span class="ticker-sep">📖</span> Election Date: 15 July 2025 <span class="ticker-sep">✦</span> Vote Symbol: Book 📖 <span class="ticker-sep">✦</span> Candidate: Sameeha.S <span class="ticker-sep">✦</span> School: SRC Memorial Matric Higher Secondary School <span class="ticker-sep">✦</span> "Together, Let's Write A Better Chapter." <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span class="ticker-sep">📖</span> Election Date: 15 July 2025 <span class="ticker-sep">✦</span> Vote Symbol: Book 📖 <span class="ticker-sep">✦</span> Candidate: Sameeha.S <span class="ticker-sep">✦</span> School: SRC Memorial Matric Higher Secondary School <span class="ticker-sep">✦</span> "Together, Let's Write A Better Chapter." <span class="ticker-sep">✦</span></span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge reveal">📖 SPL Candidate 2025 · Vote Symbol: Book</div>
+      <h1 class="hero-title">
+        <div class="line1 reveal">Together We Learn,</div>
+        <div class="line2 reveal">Together We Lead.</div>
+      </h1>
+      <p class="hero-tagline reveal">"Together, Let's Write A Better Chapter."</p>
+      <p class="hero-desc reveal">
+        I'm <strong>Sameeha.S</strong>, your candidate for School Pupil Leader at SRC Memorial Matric Higher Secondary School. My mission is to serve every student, strengthen our school community, and build a future where every voice is heard.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#about" class="btn-primary">Meet Sameeha ✨</a>
+        <a href="#hub" class="btn-secondary">Explore Student Hub →</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat-item">
+          <div class="stat-num" data-count="1200">0</div>
+          <div class="stat-label">Students</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="80">0</div>
+          <div class="stat-label">Teachers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="25">0</div>
+          <div class="stat-label">Events / Year</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="50">0</div>
+          <div class="stat-label">Achievements</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-image-wrap">
+        <div class="hero-image-bg"></div>
+        <div class="hero-image-ring"></div>
+        <div class="hero-image-ring2"></div>
+        <!-- Portrait placeholder — replace src with real image -->
+        <div style="width:100%;height:100%;border-radius:160px 160px 120px 120px;background:linear-gradient(160deg,#3A1010 0%,#7B1C1C 40%,#1A0808 100%);border:3px solid rgba(201,150,42,0.4);box-shadow:0 20px 60px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+          <span style="font-size:5rem;">👩‍🎓</span>
+          <span style="color:var(--gold-light);font-size:0.85rem;font-weight:600;letter-spacing:0.08em;">SAMEEHA.S</span>
+        </div>
+        <div class="hero-badge-float">
+          <span class="symbol">📖</span>
+          <span class="label">Vote Book</span>
+        </div>
+        <div class="hero-school-badge">
+          <span class="school-badge-icon">🏫</span>
+          <div class="school-badge-text">
+            <strong>SRC Memorial</strong>
+            Matric Hr. Sec. School
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section id="values">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label">What I Stand For</div>
+      <h2 class="section-title">Leadership Values</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">Every decision I make as SPL will be guided by these core values — principles that put our school and students first.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal"><span class="value-icon">📚</span><div class="value-name">Knowledge</div><p class="value-desc">Championing a culture where every student loves to learn and grow intellectually.</p></div>
+      <div class="value-card reveal"><span class="value-icon">🤝</span><div class="value-name">Respect</div><p class="value-desc">Building an environment where every voice matters and every person is valued.</p></div>
+      <div class="value-card reveal"><span class="value-icon">🌟</span><div class="value-name">Service</div><p class="value-desc">Leading by serving — prioritising the needs of our school community above all.</p></div>
+      <div class="value-card reveal"><span class="value-icon">💎</span><div class="value-name">Honesty</div><p class="value-desc">Transparent, trustworthy leadership that never compromises on integrity.</p></div>
+      <div class="value-card reveal"><span class="value-icon">⚖️</span><div class="value-name">Responsibility</div><p class="value-desc">Owning outcomes, taking initiative, and being accountable to every student.</p></div>
+      <div class="value-card reveal"><span class="value-icon">🎯</span><div class="value-name">Discipline</div><p class="value-desc">Structured thinking and committed action to achieve our shared school goals.</p></div>
+      <div class="value-card reveal"><span class="value-icon">🏆</span><div class="value-name">Teamwork</div><p class="value-desc">Uniting students, teachers, and staff to achieve more together than alone.</p></div>
+      <div class="value-card reveal"><span class="value-icon">💡</span><div class="value-name">Innovation</div><p class="value-desc">Bringing fresh ideas and creative solutions to school challenges and activities.</p></div>
+      <div class="value-card reveal"><span class="value-icon">❤️</span><div class="value-name">Empathy</div><p class="value-desc">Listening deeply and understanding every student's perspective and needs.</p></div>
+      <div class="value-card reveal"><span class="value-icon">🗣️</span><div class="value-name">Communication</div><p class="value-desc">Keeping every student informed, heard, and connected to school leadership.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div style="height:480px;background:linear-gradient(160deg,#3A1010,#7B1C1C 40%,#2A0808);border-radius:24px;border:2px solid rgba(201,150,42,0.25);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;">
+          <span style="font-size:6rem;">👩‍🎓</span>
+          <span style="color:var(--gold-light);font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;">Sameeha.S</span>
+          <span style="color:var(--text3);font-size:0.85rem;">SPL Candidate 2025</span>
+        </div>
+        <div class="about-quote-card">
+          <div class="quote">"A leader is one who knows the way, goes the way, and shows the way."</div>
+          <div class="cite">— Sameeha's Leadership Motto</div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Sameeha.S</h2>
+        <div class="section-divider"></div>
+        <h3>Biography</h3>
+        <p>I am Sameeha.S, a dedicated and passionate student at SRC Memorial Matric Higher Secondary School. Throughout my academic journey, I have demonstrated a commitment to excellence, compassion for my peers, and a deep love for learning. I believe that leadership is not about standing above others — it is about standing beside them and lifting them higher.</p>
+        <h3>Mission</h3>
+        <p>To create an inclusive, vibrant school environment where every student feels seen, heard, and empowered to reach their full potential — through knowledge, service, and unity.</p>
+        <h3>Vision</h3>
+        <p>A school where leadership is not a privilege but a shared responsibility — where teachers, students, and staff write a better chapter together, every single day.</p>
+        <h3>My Skills</h3>
+        <div class="skills-list">
+          <span class="skill-tag">Public Speaking</span>
+          <span class="skill-tag">Team Leadership</span>
+          <span class="skill-tag">Academic Excellence</span>
+          <span class="skill-tag">Event Organization</span>
+          <span class="skill-tag">Conflict Resolution</span>
+          <span class="skill-tag">Student Advocacy</span>
+          <span class="skill-tag">Community Service</span>
+          <span class="skill-tag">Creative Thinking</span>
+        </div>
+        <h3>Journey</h3>
+        <div class="about-timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2022</div>
+            <div class="timeline-content"><strong>Class Representative</strong>Led class initiatives, organized study groups and inter-class events.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2023</div>
+            <div class="timeline-content"><strong>Cultural Secretary</strong>Organized school cultural programs and represented the school at district events.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-content"><strong>Academic Excellence Award</strong>Recognized for outstanding performance and peer mentoring contributions.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-content"><strong>SPL Candidate 📖</strong>Running for School Pupil Leader to serve the entire SRC Memorial community.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDENT HUB -->
+<section id="hub">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label">For Every Student</div>
+      <h2 class="section-title">Student Hub</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">A one-stop platform for study materials, resources, guidance, and everything a SRC student needs to thrive.</p>
+    </div>
+    <div class="hub-grid">
+      <div class="hub-card reveal">
+        <div class="hub-icon">📝</div>
+        <div class="hub-title">Study Materials</div>
+        <p class="hub-desc">Notes, question papers, and exam timetables organized by class and subject for easy access anytime.</p>
+        <span class="hub-tag">Academic</span>
+      </div>
+      <div class="hub-card reveal">
+        <div class="hub-icon">🧩</div>
+        <div class="hub-title">Daily Quiz</div>
+        <p class="hub-desc">Sharpen your mind with daily GK, vocabulary challenges, and subject-based quizzes with leaderboards.</p>
+        <span class="hub-tag">Interactive</span>
+      </div>
+      <div class="hub-card reveal">
+        <div class="hub-icon">📖</div>
+        <div class="hub-title">Book Club</div>
+        <p class="hub-desc">Book of the week, reading challenges, reviews, and library suggestions to nurture a love of reading.</p>
+        <span class="hub-tag">Reading</span>
+      </div>
+      <div class="hub-card reveal">
+        <div class="hub-icon">🗓️</div>
+        <div class="hub-title">Homework Board</div>
+        <p class="hub-desc">Never miss an assignment — view, track, and complete homework with deadline reminders.</p>
+        <span class="hub-tag">Organisation</span>
+      </div>
+      <div class="hub-card reveal">
+        <div class="hub-icon">🚀</div>
+        <div class="hub-title">Career Guidance</div>
+        <p class="hub-desc">Explore career paths, scholarship opportunities, and college guidance to plan your future with confidence.</p>
+        <span class="hub-tag">Future Ready</span>
+      </div>
+      <div class="hub-card reveal">
+        <div class="hub-icon">💬</div>
+        <div class="hub-title">Motivational Corner</div>
+        <p class="hub-desc">Daily quotes, success stories from alumni, and a study planner to keep you inspired and on track.</p>
+        <span class="hub-tag">Inspiration</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE OF STUDENTS -->
+<section id="voice">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label">Be Heard</div>
+      <h2 class="section-title">Voice of Students</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">Your ideas, suggestions, and feedback shape a better school. Share anonymously — every voice matters.</p>
+    </div>
+    <div class="voice-wrap reveal">
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--text);margin-bottom:6px;">Share Your Thoughts</h3>
+      <p style="color:var(--text2);font-size:0.88rem;">Anonymous submissions. Positive, constructive ideas only. Let's grow together.</p>
+      <div class="voice-categories">
+        <button class="cat-btn active">💡 Ideas</button>
+        <button class="cat-btn">🎯 Suggestions</button>
+        <button class="cat-btn">⚠️ Problems</button>
+        <button class="cat-btn">⭐ Feedback</button>
+        <button class="cat-btn">🏫 School Improvement</button>
+      </div>
+      <textarea class="voice-textarea" placeholder="Share your idea, suggestion, or feedback here... (Anonymous)"></textarea>
+      <button class="btn-primary" onclick="submitSuggestion()" style="cursor:none;">Submit Anonymously 🚀</button>
+      <div class="voice-suggestions" id="suggestions-list">
+        <h4 style="font-size:0.85rem;color:var(--text3);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-top:16px;">Recent Community Suggestions</h4>
+        <div class="suggestion-card">
+          <div class="suggestion-avatar">A</div>
+          <div class="suggestion-body">
+            <div class="suggestion-cat">💡 Ideas</div>
+            <div class="suggestion-text">Can we have a dedicated reading room in the library that's open during lunch breaks? It would help students who want a quiet space to study.</div>
+            <div class="suggestion-time">2 hours ago · Anonymous</div>
+          </div>
+        </div>
+        <div class="suggestion-card">
+          <div class="suggestion-avatar">S</div>
+          <div class="suggestion-body">
+            <div class="suggestion-cat">🏫 School Improvement</div>
+            <div class="suggestion-text">Monthly inter-class GK competitions would be amazing! It would make learning fun and more competitive in a healthy way.</div>
+            <div class="suggestion-time">5 hours ago · Anonymous</div>
+          </div>
+        </div>
+        <div class="suggestion-card">
+          <div class="suggestion-avatar">R</div>
+          <div class="suggestion-body">
+            <div class="suggestion-cat">⭐ Feedback</div>
+            <div class="suggestion-text">The morning assembly is inspiring but it would be even better if students could share a motivational story or poem once a week.</div>
+            <div class="suggestion-time">1 day ago · Anonymous</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPRECIATION WALL -->
+<section id="appreciation">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label">Spreading Positivity</div>
+      <h2 class="section-title">Appreciation Wall ❤️</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">A wall of gratitude and love — where students appreciate teachers, teachers appreciate students, and friends celebrate each other.</p>
+    </div>
+    <div class="appreciation-grid">
+      <div class="appreciation-card reveal">
+        <span class="heart">❤️</span>
+        <div class="appreciation-from">Student → Teacher</div>
+        <div class="appreciation-msg">"Your patience and dedication inspire us every single day. Thank you for believing in us even when we doubted ourselves."</div>
+        <div class="appreciation-sig">— A Grateful Student, Grade 11</div>
+      </div>
+      <div class="appreciation-card reveal">
+        <span class="heart">🌟</span>
+        <div class="appreciation-from">Teacher → Student</div>
+        <div class="appreciation-msg">"Watching you grow from a shy student to a confident leader has been the greatest reward of my teaching career."</div>
+        <div class="appreciation-sig">— A Proud Teacher</div>
+      </div>
+      <div class="appreciation-card reveal">
+        <span class="heart">💛</span>
+        <div class="appreciation-from">Friend → Friend</div>
+        <div class="appreciation-msg">"You always find a way to make everyone smile even on the hardest days. SRC is brighter because of you!"</div>
+        <div class="appreciation-sig">— Your Best Friend</div>
+      </div>
+      <div class="appreciation-card reveal">
+        <span class="heart">💜</span>
+        <div class="appreciation-from">Student → School</div>
+        <div class="appreciation-msg">"SRC Memorial is not just a school — it is a family. Every corridor holds a memory I will cherish forever."</div>
+        <div class="appreciation-sig">— A Proud SRC Student</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label">Mark Your Calendar</div>
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">Stay updated on all school events, competitions, and celebrations happening at SRC Memorial.</p>
+    </div>
+    <div class="events-grid">
+      <div class="event-card reveal">
+        <div class="event-banner"></div>
+        <div class="event-body">
+          <div class="event-date">📅 July 15, 2025 · Main Auditorium</div>
+          <div class="event-name">SPL Election Day 📖</div>
+          <p class="event-desc">The most important day — cast your vote for School Pupil Leader and shape the future of SRC Memorial! Vote 📖 Book — Vote Sameeha.S</p>
+          <div class="countdown" id="election-countdown">
+            <div class="countdown-unit"><div class="countdown-num" id="cd-days">--</div><div class="countdown-label">Days</div></div>
+            <div class="countdown-unit"><div class="countdown-num" id="cd-hours">--</div><div class="countdown-label">Hours</div></div>
+            <div class="countdown-unit"><div class="countdown-num" id="cd-mins">--</div><div class="countdown-label">Mins</div></div>
+            <div class="countdown-unit"><div class="countdown-num" id="cd-secs">--</div><div class="countdown-label">Secs</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-banner"></div>
+        <div class="event-body">
+          <div class="event-date">📅 August 10, 2025 · School Ground</div>
+          <div class="event-name">Annual Sports Day 🏆</div>
+          <p class="event-desc">A day of athletic excellence, school spirit, and sportsmanship. Every student encouraged to participate and represent their house.</p>
+          <a href="#" class="event-register">Register Now →</a>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-banner"></div>
+        <div class="event-body">
+          <div class="event-date">📅 September 5, 2025 · Main Hall</div>
+          <div class="event-name">Science Expo 2025 🔬</div>
+          <p class="event-desc">Showcase your innovations and experiments! Open to all grades. Winners represent SRC Memorial at the district level competition.</p>
+          <a href="#" class="event-register">Register Now →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label">Our Pride</div>
+      <h2 class="section-title">Achievements</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">Celebrating the academic, cultural, and sporting milestones of the SRC Memorial family.</p>
+    </div>
+    <div class="achievements-grid">
+      <div class="achievement-card reveal"><span class="achievement-medal">🥇</span><div><div class="achievement-title">District Science Olympiad</div><div class="achievement-sub">First Place — Senior Category</div><div class="achievement-year">2024</div></div></div>
+      <div class="achievement-card reveal"><span class="achievement-medal">🏆</span><div><div class="achievement-title">Inter-School Debate</div><div class="achievement-sub">Champion — Best Speaker Award</div><div class="achievement-year">2024</div></div></div>
+      <div class="achievement-card reveal"><span class="achievement-medal">⭐</span><div><div class="achievement-title">Academic Excellence</div><div class="achievement-sub">100% Pass Rate — Board Exams</div><div class="achievement-year">2024</div></div></div>
+      <div class="achievement-card reveal"><span class="achievement-medal">🎨</span><div><div class="achievement-title">Cultural Fest Champion</div><div class="achievement-sub">Best Performing School — District Level</div><div class="achievement-year">2023</div></div></div>
+      <div class="achievement-card reveal"><span class="achievement-medal">⚽</span><div><div class="achievement-title">State Football Tournament</div><div class="achievement-sub">Semi-Finals — Boys Team</div><div class="achievement-year">2024</div></div></div>
+      <div class="achievement-card reveal"><span class="achievement-medal">📚</span><div><div class="achievement-title">Reading Challenge</div><div class="achievement-sub">Most Books Read — School Record</div><div class="achievement-year">2025</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label">Memories</div>
+      <h2 class="section-title">Photo Gallery</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">Moments that define SRC Memorial — our community, our celebrations, our achievements.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item gallery-placeholder" style="height:200px;">🏫</div>
+      <div class="gallery-item gallery-placeholder" style="height:260px;">🎭</div>
+      <div class="gallery-item gallery-placeholder" style="height:180px;">🏆</div>
+      <div class="gallery-item gallery-placeholder" style="height:240px;">📚</div>
+      <div class="gallery-item gallery-placeholder" style="height:220px;">⚽</div>
+      <div class="gallery-item gallery-placeholder" style="height:190px;">🎨</div>
+      <div class="gallery-item gallery-placeholder" style="height:250px;">🔬</div>
+      <div class="gallery-item gallery-placeholder" style="height:210px;">🎤</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Contact</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <h3>Let's Connect</h3>
+        <p>Have questions, ideas, or want to support the campaign? Reach out — every conversation matters and every connection strengthens our community.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🏫</div>
+          <span>SRC Memorial Matric Higher Secondary School</span>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📖</div>
+          <span>Vote Symbol: Book — SPL Election, 15 July 2025</span>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">💡</div>
+          <span>Together, Let's Write A Better Chapter.</span>
+        </div>
+        <div style="margin-top:32px;background:var(--surface);border:1px solid var(--border);border-radius:20px;height:200px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--text3);">
+          📍 SRC Memorial School Location
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" placeholder="Enter your name"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Class & Section</label>
+          <input type="text" class="form-input" placeholder="e.g. Grade 10 - A"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Share your thoughts, ideas, or support..."></textarea>
+        </div>
+        <button class="form-submit" onclick="handleContact()">Send Message ✉️</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOTE BANNER -->
+<section id="vote-banner">
+  <div class="vote-banner-content">
+    <div class="vote-symbol">📖</div>
+    <h2 class="vote-banner-title">Vote Sameeha.S</h2>
+    <p class="vote-banner-sub">For School Pupil Leader · SRC Memorial Matric Higher Secondary School</p>
+    <div class="vote-date">📅 Election Date: 15 July 2025 · Vote Symbol: 📖 Book</div>
+    <div style="margin-top:28px;font-family:'Dancing Script',cursive;font-size:1.8rem;color:rgba(245,228,176,0.9);">"Together, Let's Write A Better Chapter."</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">📖 Sameeha.S</div>
+        <p>SPL Candidate 2025 · SRC Memorial Matric Higher Secondary School. Together, Let's Write A Better Chapter.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Campaign</h4>
+        <a href="#about">About Sameeha</a>
+        <a href="#values">Values</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#vote-banner">Vote Now</a>
+      </div>
+      <div class="footer-nav">
+        <h4>Student Hub</h4>
+        <a href="#hub">Study Materials</a>
+        <a href="#hub">Book Club</a>
+        <a href="#voice">Voice of Students</a>
+        <a href="#appreciation">Appreciation Wall</a>
+      </div>
+      <div class="footer-nav">
+        <h4>School</h4>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#">Help Center</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2025 <span>Sameeha.S</span> SPL Campaign · SRC Memorial School · All rights reserved.</div>
+      <div>Made with ❤️ for <span>SRC Memorial Community</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Vote Button -->
+<a href="#vote-banner" id="floating-vote">📖 Vote Book</a>
+
+<script>
+// ===== CURSOR =====
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  setTimeout(() => {
+    ring.style.left = e.clientX + 'px';
+    ring.style.top = e.clientY + 'px';
+  }, 80);
+});
+document.querySelectorAll('a,button').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.style.width = '20px'; cursor.style.height = '20px';
+    ring.style.width = '56px'; ring.style.height = '56px';
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.style.width = '12px'; cursor.style.height = '12px';
+    ring.style.width = '40px'; ring.style.height = '40px';
+  });
+});
+
+// ===== SCROLL PROGRESS =====
+window.addEventListener('scroll', () => {
+  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  document.getElementById('scroll-progress').style.transform = `scaleX(${pct})`;
+});
+
+// ===== REVEAL =====
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ===== THEME =====
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.getElementById('theme-toggle').textContent = isDark ? '🌙' : '☀️';
+}
+
+// ===== MOBILE MENU =====
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+
+// ===== COUNTER ANIMATION =====
+function animateCounter(el, target) {
+  let start = 0;
+  const duration = 2000;
+  const step = timestamp => {
+    if (!start) start = timestamp;
+    const progress = Math.min((timestamp - start) / duration, 1);
+    el.textContent = Math.floor(progress * target).toLocaleString() + (target >= 1000 ? '+' : '+');
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+const statsObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      document.querySelectorAll('[data-count]').forEach(el => {
+        animateCounter(el, parseInt(el.dataset.count));
+      });
+      statsObserver.disconnect();
+    }
+  });
+}, {threshold:0.5});
+const statsSection = document.querySelector('.hero-stats');
+if (statsSection) statsObserver.observe(statsSection);
+
+// ===== COUNTDOWN =====
+function updateCountdown() {
+  const target = new Date('2025-07-15T09:00:00').getTime();
+  const now = Date.now();
+  const diff = target - now;
+  if (diff <= 0) {
+    document.getElementById('cd-days').textContent = '0';
+    document.getElementById('cd-hours').textContent = '0';
+    document.getElementById('cd-mins').textContent = '0';
+    document.getElementById('cd-secs').textContent = '0';
+    return;
+  }
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  document.getElementById('cd-days').textContent = d;
+  document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+  document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+  document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ===== HERO CANVAS =====
+const canvas = document.getElementById('hero-canvas');
+const ctx = canvas.getContext('2d');
+let particles = [];
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+for(let i=0;i<60;i++){
+  particles.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    r: Math.random()*2+0.5,
+    vx: (Math.random()-0.5)*0.4,
+    vy: (Math.random()-0.5)*0.4,
+    alpha: Math.random()*0.4+0.1,
+    color: Math.random()>0.5?'201,150,42':'123,28,28'
+  });
+}
+function drawParticles() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p => {
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(${p.color},${p.alpha})`;
+    ctx.fill();
+    p.x+=p.vx; p.y+=p.vy;
+    if(p.x<0||p.x>canvas.width) p.vx*=-1;
+    if(p.y<0||p.y>canvas.height) p.vy*=-1;
+  });
+  // Draw connections
+  for(let i=0;i<particles.length;i++){
+    for(let j=i+1;j<particles.length;j++){
+      const dx=particles[i].x-particles[j].x;
+      const dy=particles[i].y-particles[j].y;
+      const dist=Math.sqrt(dx*dx+dy*dy);
+      if(dist<120){
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x,particles[i].y);
+        ctx.lineTo(particles[j].x,particles[j].y);
+        ctx.strokeStyle=`rgba(201,150,42,${0.06*(1-dist/120)})`;
+        ctx.lineWidth=0.5;
+        ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(drawParticles);
+}
+drawParticles();
+
+// ===== VALUE CARDS CATEGORY TOGGLE =====
+document.querySelectorAll('.cat-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// ===== VOICE SUBMIT =====
+function submitSuggestion() {
+  const ta = document.querySelector('.voice-textarea');
+  const text = ta.value.trim();
+  if(!text){ta.focus();return;}
+  const activecat = document.querySelector('.cat-btn.active');
+  const cat = activecat?activecat.textContent:'💡 Ideas';
+  const list = document.getElementById('suggestions-list');
+  const card = document.createElement('div');
+  card.className='suggestion-card';
+  card.style.animation='fadeUp 0.4s ease both';
+  card.innerHTML=`
+    <div class="suggestion-avatar">✨</div>
+    <div class="suggestion-body">
+      <div class="suggestion-cat">${cat}</div>
+      <div class="suggestion-text">${text}</div>
+      <div class="suggestion-time">Just now · Anonymous</div>
+    </div>`;
+  list.appendChild(card);
+  ta.value='';
+  card.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+// ===== CONTACT =====
+function handleContact() {
+  alert('✅ Your message has been received! Thank you for your support. Together, let\'s write a better chapter! 📖');
+}
+
+// ===== NAVBAR SCROLL =====
+window.addEventListener('scroll', () => {
+  const nb = document.getElementById('navbar');
+  if(window.scrollY > 60) {
+    nb.style.background = document.documentElement.getAttribute('data-theme')==='dark'
+      ? 'rgba(13,6,8,0.95)' : 'rgba(250,246,239,0.95)';
+  } else {
+    nb.style.background = document.documentElement.getAttribute('data-theme')==='dark'
+      ? 'rgba(13,6,8,0.6)' : 'rgba(250,246,239,0.75)';
+  }
+});
+</script>
+</body>
+</html>
